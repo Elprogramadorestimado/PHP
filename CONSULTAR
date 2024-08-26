@@ -1,0 +1,17 @@
+<?php
+              if (isset($_POST['consultar']))
+                 {
+                  include("conexion.php");
+	  $encontrado = 0;
+                  $cedula = $_POST['cedula'];
+                  $resultados = mysqli_query($conexion,"SELECT * FROM $tabla01 where cedula = $cedula");
+                  while($consulta = mysqli_fetch_array($resultados))
+                        {
+                           $encontrado = 1;
+					  
+                         }
+	   if ($encontrado == 0){
+	       echo "Dato no encontrado";
+	       }
+                 } 
+   ?>
