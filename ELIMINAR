@@ -1,0 +1,21 @@
+<?php
+              if (isset($_POST['eliminar']))
+                   {
+                  include("conexion.php");
+				  $encontrado = 0;
+                  $cedula = $_POST['cedula'];
+                  $resultados = mysqli_query($conexion,"SELECT * FROM $tabla01 where cedula = $cedula");
+                  while($consulta = mysqli_fetch_array($resultados))
+                    {
+                      $encontrado = 1;
+					  
+                      }
+	if ($encontrado == 1){
+	$_DELETE_SQL = "DELETE FROM $tabla01 where cedula = $cedula";
+                mysqli_query($conexion,$_DELETE_SQL);
+	            echo "Datos Eliminado";
+                       }else{
+	          echo "Datos No Encontrado";
+	       }
+                    } 
+               ?>
