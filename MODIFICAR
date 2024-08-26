@@ -1,0 +1,15 @@
+if ($encontrado == 0){
+      echo "Dato no encontrado";
+ }else{
+        $cedula = $_POST['cedula'];
+        $nombre = $_POST['nombre'];
+        $direccion = $_POST['direccion'];
+        $telefono = $_POST['telefono'];
+$_UPDATE_SQL = "UPDATE $tabla01 set nombre = '$nombre', direccion = '$direccion', telefono = '$telefono'  where cedula = '$cedula‘ "; 
+
+mysqli_query($conexion,$_UPDATE_SQL);
+	                  
+echo "Datos Modificados";
+
+	 }
+ 
