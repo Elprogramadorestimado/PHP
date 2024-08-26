@@ -1,0 +1,9 @@
+include ("conexion.php");
+	        $cedula = $_POST['cedula'];
+	        $nombre = $_POST['nombre'];
+	        $direccion = $_POST['direccion'];
+	        $telefono = $_POST['telefono'];
+
+ $conexion ->query ("INSERT INTO $tabla01 (cedula, nombre, direccion, telefono, correo, password) VALUES ('$cedula', '$nombre', '$direccion', '$telefono', '$correo', '$password')");	
+
+echo "Dato Agregado .. excelente carlos continua";
