@@ -1,0 +1,6 @@
+if (($cedula == "") or ($nombre == "") or ($direccion == "") or ($telefono ==""))
+	 {	
+	echo "Ninguno de los campos pueden estar vacios";
+                 }else{
+
+                 }
